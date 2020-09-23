@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DIEN_TICH_HINH_CHU_NHAT</title>
+</head>
+<body>
+<h id="s">diện tích hình chữ nhật này là:</h>
+<form>
+    <table>
+        <tr>
+            <th> Chiều dài:</th>
+            <th> <input id="cd" type="number"></th>
+        </tr>
+        <tr>
+            <th> Chiều rộng:</th>
+            <th><input id="cr" type="number"></th>
+        </tr>
+        <tr>
+            <th colspan="2"><button type="submit" onclick="dienTich()">Kết quả</button></th>
+        </tr>
+
+
+
+    </table>
+
+</form>
+
+</body>
+</html>
+<script> function dienTich() {
+
+    var d,r,dt;
+    d= parseInt(document.getElementById("cd").value);
+    r= parseInt(document.getElementById("cr").value);
+    dt =d*r;
+
+    alert(dt);
+}
+
+</script>

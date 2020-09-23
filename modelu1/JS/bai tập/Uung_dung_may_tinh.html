@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ung dung may tinh</title>
+</head>
+<body>
+<form >
+    so thu nhat:<input id="soa" type="number"  ><br>
+    so thu hai:<input id="sob" type="number"  ><br>
+    <button onclick="tong()">+</button>
+    <button onclick="hieu()">-</button>
+    <button onclick="tich()">*</button>
+    <button onclick="thuong()">/</button>
+
+
+</form>
+
+</body>
+</html>
+<script>
+
+
+
+
+    function tong() {
+        let a,b;
+        a=parseInt(document.getElementById("soa").value);
+        b=parseInt( document.getElementById("sob").value);
+
+        let tong=a+b;
+        alert(tong);
+
+
+    }
+    function hieu() {
+        let a,b;
+        a=parseInt(document.getElementById("soa").value);
+        b=parseInt( document.getElementById("sob").value);
+
+        let hieu=a-b;
+        alert(hieu);
+
+
+    }
+    function tich() {
+        let a,b;
+        a=parseInt(document.getElementById("soa").value);
+        b=parseInt( document.getElementById("sob").value);
+
+        let tich=a*b;
+        alert(tich);
+
+
+    }
+    function thuong() {
+        let a,b;
+        a=parseInt(document.getElementById("soa").value);
+        b=parseInt( document.getElementById("sob").value);
+
+        let thuong = a /b;
+        alert(thuong);
+
+
+    }
+/*   function lay_giatri()
+    {
+        alert(document.form1.test.value);
+    }*/
+</script>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra xem a có phải là bội số của b hay không?</title>
+</head>
+<body>
+<h>Click nút bên dưới để kiểm tra</h>
+<p> <button onclick="check()" type="submit">Start!</button> </p>
+
+
+
+</body>
+</html>
+<script>
+
+
+
+        function check(){
+            var a,b,c;
+            a= parseInt(prompt("Nhập số a"));
+            b=parseInt(prompt("Nhập số b"));
+            c= a % b;
+
+             if(c ==0 ){
+                         alert("a là bội của b");}
+               else{
+                 alert( "a không phải là bội của b");}
+
+
+
+}
+
+</script>
