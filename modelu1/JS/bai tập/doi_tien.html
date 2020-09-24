@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>chuyen doi tien</title>
+</head>
+<body>
+<form>
+    Số Tiền Cần Đổi:<input  id="sotien" type="number">
+    Bạn Muốn Đổi Từ Nước:
+    <select  id="to" >
+    <option value="usd">MỸ</option>
+    <option value="vn" >VIỆT NAM</option>
+    </select>
+    Sang Nước:
+    <select id="fr">
+        <option value="vn">VIỆT NAM</option>
+        <option  value="usd">MỸ</option> </select>
+    <button type="submit" onclick="dosomething()" >KẾT QUẢ</button>
+
+
+</form>
+
+</body>
+</html>
+<script>
+
+
+    function dosomething(){
+        var a,b,c,d,e;
+        a= parseInt(document.getElementById("sotien").value);
+        b=document.getElementById("to").value;
+        c=document.getElementById("fr").value;
+
+
+
+        e=parseInt(a/23);
+
+        if(b =="usd" && c=="vn"){
+            d=parseInt(23*a);
+            alert(d);}
+        else if(b=="vn" && c=="usd"){
+            e=parseInt(a/23);
+           alert(e);
+        }    else {alert(a);}
+
+
+
+    }
+
+
+
+
+
+
+
+</script>

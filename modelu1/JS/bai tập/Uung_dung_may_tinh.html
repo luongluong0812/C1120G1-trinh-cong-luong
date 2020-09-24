@@ -55,11 +55,16 @@
     }
     function thuong() {
         let a,b;
+
+
         a=parseInt(document.getElementById("soa").value);
         b=parseInt( document.getElementById("sob").value);
-
         let thuong = a /b;
-        alert(thuong);
+
+        if(b == 0){   alert("so b phải khác 0"); }
+        else { alert(thuong);}
+
+
 
 
     }
