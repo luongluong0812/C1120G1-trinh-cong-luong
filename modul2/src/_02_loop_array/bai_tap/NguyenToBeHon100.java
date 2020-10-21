@@ -6,11 +6,22 @@ public class NguyenToBeHon100 {
     public static void main(String[] args) {
         int temp=2;
         boolean check=true;
-        for(int i=2;i<temp;i++){
-            if(temp%2==0){
-                check=false;
-                break;
-            }
-        }
-    }
-}
+       while (temp<100){
+           for(int i=2;i<temp;i++){
+               if(temp%i==0){
+                   check=false;
+                   break;
+               }
+
+           }
+           if(check){
+               System.out.println(temp+"day la so nguyen to");
+           }
+           check=true;
+           temp++;
+       }
+       }
+
+       }
+
+
