@@ -31,4 +31,7 @@ public class Animal {
     public void setWeight(float weight) {
         this.weight = weight;
     }
+    public void eat(){
+        System.out.println("an gi ke cha tao");
+    }
 }

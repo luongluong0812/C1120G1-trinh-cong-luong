@@ -12,6 +12,9 @@ public class Student extends Person{
         super(address,id,email);
     }
 
-
+    @Override
+    public void eat() {
+        System.out.println("an tat an chuoi");
+    }
 }
 

@@ -19,4 +19,9 @@ public class Person extends Animal {
     public void move(){
         System.out.println("dang di bo");
     }
+
+    @Override
+    public void eat() {
+        System.out.println("an o nha hang chu dau");
+    }
 }
