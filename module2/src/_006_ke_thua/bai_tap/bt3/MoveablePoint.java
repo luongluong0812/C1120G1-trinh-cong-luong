@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class MoveablePoint extends Point {
     private double xSpeed;
     private double ySpeed;
-    private double [] arr=new double[2];
+
 
     public MoveablePoint() {
     }
@@ -21,24 +21,26 @@ public class MoveablePoint extends Point {
         this.ySpeed = ySpeed;
     }
 
-    public double getxSpeed() {
+    public double getXSpeed() {
         return xSpeed;
     }
 
-    public void setxSpeed(double xSpeed) {
+    public void setXSpeed(double xSpeed) {
         this.xSpeed = xSpeed;
     }
 
-    public double getySpeed() {
+    public double getYSpeed() {
         return ySpeed;
     }
 
-    public void setySpeed(double ySpeed) {
+    public void setYSpeed(double ySpeed) {
         this.ySpeed = ySpeed;
     }
-    public double[] Speed(){
-        arr[0]=getxSpeed();
-        arr[1]=getySpeed();
+
+    public double[] Speed() {
+        double[] arr = new double[2];
+        arr[0] = getXSpeed();
+        arr[1] = getYSpeed();
         return arr;
 
     }
@@ -48,13 +50,13 @@ public class MoveablePoint extends Point {
         return "MoveablePoint{" +
                 "xSpeed=" + xSpeed +
                 ", ySpeed=" + ySpeed +
-                ", arr=" + Arrays.toString(Speed()) +
+                ", arr=" + Arrays.toString(super.getXY()) +
                 '}';
     }
 
-    MoveablePoint  move(){
-        super.setX((super.getX())+getxSpeed());
-        super.setY(super.getY()+getySpeed());
+    MoveablePoint move() {
+        super.setX((super.getX()) + getXSpeed());
+        super.setY(super.getY() + getYSpeed());
         return this;
 
     }
