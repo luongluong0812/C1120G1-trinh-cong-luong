@@ -17,10 +17,10 @@ public class BinarySearch {
             }
 
         }
-        return low;
+        return -1;
     }
 
     public static void main(String[] args) {
-        System.out.println( binarySeach(list,15));
+        System.out.println( binarySeach(list,10));
     }
 }
