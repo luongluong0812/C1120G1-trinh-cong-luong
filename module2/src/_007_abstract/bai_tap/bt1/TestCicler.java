@@ -11,5 +11,7 @@ public class TestCicler {
         System.out.println(circle);
         circle.resize(50);
         System.out.println(circle.getArea());
+        System.out.println("***********");
+
     }
 }

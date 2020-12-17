@@ -1,6 +1,6 @@
 package _007_abstract.bai_tap.bt2;
 
-public class Circle extends Shape {
+public class Circle extends Shape implements Test {
     private double radius = 1.0;
 
     public Circle() {
@@ -37,5 +37,10 @@ public class Circle extends Shape {
                 + getRadius()
                 + ", which is a subclass of "
                 + super.toString();
+    }
+
+    @Override
+    public void doSomeThing() {
+        System.out.println("day la hinh tron");
     }
 }

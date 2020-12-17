@@ -1,6 +1,6 @@
 package _007_abstract.bai_tap.bt2;
 
-public class Square extends Rectangle implements Colorable {
+public class Square extends Rectangle implements Colorable,Test {
     public Square() {
     }
 
@@ -42,5 +42,10 @@ public class Square extends Rectangle implements Colorable {
     @Override
     public void howToColor() {
         System.out.println(" Color all four sides..");
+    }
+
+    @Override
+    public void doSomeThing() {
+        System.out.println("day la hinh vuong");
     }
 }
