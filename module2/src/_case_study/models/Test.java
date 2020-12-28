@@ -1,23 +1,41 @@
 package _case_study.models;
 
+import _case_study.controllers.MainController;
+
 import java.util.Random;
+import java.util.Scanner;
 
 public class Test {
     public static void main(String[] args) {
-        Massage m=new Massage();
-        m.setDonGia(200);
-        m.setGiaTien(150);
-        System.out.println(m.showInfor());
-        House h=new House();
-        h.setId("123456");
-        h.setTieuChuanPhong("vip");
-        System.out.println(h.showInfor());
-        Room r=new Room();
-        r.setId("1231");
-        r.setTenDichVu("villa");
-        System.out.println(r.showInfor());
+        MainController mainController = new MainController();
+        boolean check = false;
 
-        //String id, String tenDichVu, String dienTichSudung, String chiPhiThue, String soNguoiToiDa, String kieuThue, String tieuChuanPhong, String moTaTienNghi, String soTang
+        displayMenu(mainController, check);
 
+    }
+
+    private static void displayMenu(MainController mainController, boolean check) {
+        do {
+            Scanner scanner = new Scanner(System.in);
+
+
+            System.out.println("lua chon");
+            System.out.println("1.them");
+            System.out.println("2.hien thi");
+            System.out.println("3:thoat");
+            System.out.println("nhap lua chon");
+            int chose = scanner.nextInt();
+            switch (chose) {
+                case 1:
+                    mainController.addNewServices();
+                    break;
+                case 2:
+                    mainController.showServices();
+                    break;
+                case 3:
+                    check = true;
+                    break;
+            }
+        } while (!check);
     }
 }

@@ -1,12 +1,15 @@
 package _case_study.models;
 
+import java.util.List;
+import java.util.Scanner;
+
 public abstract class Services {
-    private String id;
-    private String tenDichVu;
-    private String dienTichSudung;
-    private String chiPhiThue;
-    private String soNguoiToiDa;
-    private String kieuThue;
+    public String id;
+    public String tenDichVu;
+    public String dienTichSudung;
+    public String chiPhiThue;
+    public String soNguoiToiDa;
+    public String kieuThue;
 
     public Services() {
     }
@@ -67,9 +70,24 @@ public abstract class Services {
     public void setKieuThue(String kieuThue) {
         this.kieuThue = kieuThue;
     }
+    public Scanner getScanner() {
+        Scanner scanner = new Scanner(System.in);
+        return scanner;
+    }
 
 
-
-
-    public abstract String showInfor() ;
+    @Override
+    public String toString() {
+        return "Services{" +
+                "id='" + id + '\'' +
+                ", tenDichVu='" + tenDichVu + '\'' +
+                ", dienTichSudung='" + dienTichSudung + '\'' +
+                ", chiPhiThue='" + chiPhiThue + '\'' +
+                ", soNguoiToiDa='" + soNguoiToiDa + '\'' +
+                ", kieuThue='" + kieuThue + '\'' +
+                '}';
+    }
+    private void showInfo(){
+        System.out.println(toString());
+    }
 }

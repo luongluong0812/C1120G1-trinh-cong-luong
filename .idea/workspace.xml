@@ -2,8 +2,42 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b951114c-a8f5-4126-b68b-62beed42e1f3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/modul2/src/_03_array/src/thuc_hanh/DaoNguoc.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modul2/loop/bai_tap/out/production/bai_tap/SoLuongNguyenTo.class" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/case_study_module2/src/_case_study/controllers/MainController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/case_study_module2/src/_case_study/controllers/Test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/case_study_module2/src/_case_study/models/BoPhanLamViec.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/case_study_module2/src/_case_study/models/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/case_study_module2/src/_case_study/models/DichVuDiKem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/case_study_module2/src/_case_study/models/Employee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/case_study_module2/src/_case_study/models/House.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/case_study_module2/src/_case_study/models/Room.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/case_study_module2/src/_case_study/models/Services.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/case_study_module2/src/_case_study/models/Test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/case_study_module2/src/_case_study/models/Villa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module2/out/production/module2/_12_collection_framework/bai_tap/bt1/ProductManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/module2/out/production/module2/_12_collection_framework/bai_tap/bt1/ProductManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module2/out/production/module2/_12_collection_framework/bai_tap/bt1/testMain.class" beforeDir="false" afterPath="$PROJECT_DIR$/module2/out/production/module2/_12_collection_framework/bai_tap/bt1/testMain.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module2/out/production/module2/_case_study/controllers/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/module2/out/production/module2/_case_study/controllers/MainController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module2/out/production/module2/_case_study/models/DichVuDiKem.class" beforeDir="false" afterPath="$PROJECT_DIR$/module2/out/production/module2/_case_study/models/DichVuDiKem.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module2/out/production/module2/_case_study/models/House.class" beforeDir="false" afterPath="$PROJECT_DIR$/module2/out/production/module2/_case_study/models/House.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module2/out/production/module2/_case_study/models/Karaoke.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/module2/out/production/module2/_case_study/models/Massage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/module2/out/production/module2/_case_study/models/Room.class" beforeDir="false" afterPath="$PROJECT_DIR$/module2/out/production/module2/_case_study/models/Room.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module2/out/production/module2/_case_study/models/Services.class" beforeDir="false" afterPath="$PROJECT_DIR$/module2/out/production/module2/_case_study/models/Services.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module2/out/production/module2/_case_study/models/Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/module2/out/production/module2/_case_study/models/Test.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module2/out/production/module2/_case_study/models/ThucAn.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/module2/out/production/module2/_case_study/models/Villa.class" beforeDir="false" afterPath="$PROJECT_DIR$/module2/out/production/module2/_case_study/models/Villa.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module2/src/_12_collection_framework/bai_tap/bt1/ProductManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/module2/src/_12_collection_framework/bai_tap/bt1/ProductManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module2/src/_12_collection_framework/bai_tap/bt1/testMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/module2/src/_12_collection_framework/bai_tap/bt1/testMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module2/src/_case_study/controllers/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/module2/src/_case_study/controllers/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module2/src/_case_study/models/DichVuDiKem.java" beforeDir="false" afterPath="$PROJECT_DIR$/module2/src/_case_study/models/DichVuDiKem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module2/src/_case_study/models/House.java" beforeDir="false" afterPath="$PROJECT_DIR$/module2/src/_case_study/models/House.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module2/src/_case_study/models/Karaoke.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/module2/src/_case_study/models/Massage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/module2/src/_case_study/models/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/module2/src/_case_study/models/Room.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module2/src/_case_study/models/Services.java" beforeDir="false" afterPath="$PROJECT_DIR$/module2/src/_case_study/models/Services.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module2/src/_case_study/models/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/module2/src/_case_study/models/Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module2/src/_case_study/models/ThucAn.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/module2/src/_case_study/models/Villa.java" beforeDir="false" afterPath="$PROJECT_DIR$/module2/src/_case_study/models/Villa.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +59,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -40,6 +75,7 @@
       <workItem from="1600065096440" duration="170000" />
       <workItem from="1600065329492" duration="412000" />
       <workItem from="1603329652478" duration="86000" />
+      <workItem from="1608964493417" duration="143000" />
     </task>
     <servers />
   </component>
@@ -47,6 +83,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="184" y="6" key="SettingsEditor" timestamp="1608964577356">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="184" y="6" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1608964577356" />
     <state x="65" y="0" key="new project wizard" timestamp="1603329737978">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

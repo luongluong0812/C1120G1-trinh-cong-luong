@@ -19,14 +19,12 @@ public class ProductManager extends Product {
     public void disPlay() {
         for (Product p : productList) {
 
-            System.out.println("id san pham: " + p.getId());
-            System.out.println("name san pham: " + p.getName());
-            System.out.println("gia san pham: " + p.getPrice());
+            System.out.println(p);
             System.out.println("****************");
         }
     }
 
-    private Scanner getScanner() {
+    public Scanner getScanner() {
         Scanner scanner = new Scanner(System.in);
         return scanner;
     }
@@ -84,13 +82,13 @@ public class ProductManager extends Product {
 
     public void seach() {
         boolean check = false;
-        System.out.println("nhap ten can tim: ");
+
         String name = getScanner().nextLine();
         for (Product p : productList) {
             if (p.getName().contains(name)) {
 
                 System.out.println("san pham co trong danh sach: ");
-                System.out.println("id: " +"  "+ p.getId() + "ten: " + p.getName() +"  "+ "gia: " + p.getPrice());
+                System.out.println("id: " + "  " + p.getId() + "ten: " + p.getName() + "  " + "gia: " + p.getPrice());
                 check = true;
             } else {
                 check = false;
@@ -99,7 +97,25 @@ public class ProductManager extends Product {
         }
         if (check = false) {
             System.out.println("ko co trong danh sach");
+
         }
+    }
+
+    public void searchPrice() {
+        boolean check = false;
+        int value = getScanner().nextInt();
+        for (Product p : productList) {
+            if (p.getPrice() == value) {
+                System.out.println("san phan co trong danh sach");
+                System.out.println("id: " + "  " + p.getId() + "ten: " + p.getName() + "  " + "gia: " + p.getPrice());
+            } else {
+                check = true;
+            }
+        }
+        if (!check) {
+            System.out.println("san pham khong ton tai");
+        }
+
     }
 
     public void next() {
@@ -119,8 +135,9 @@ public class ProductManager extends Product {
         }
 
     }
-    public void sortByPrice(){
-        Collections.sort(productList,new PriceComparator());
+
+    public void sortByPrice() {
+        Collections.sort(productList, new PriceComparator());
         for (Product p : productList) {
             System.out.println("****************");
             System.out.println("id san pham: " + p.getId());

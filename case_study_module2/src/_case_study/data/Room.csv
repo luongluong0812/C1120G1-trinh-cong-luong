@@ -1,0 +1,6 @@
+Room{:tenDichVu='1'dichVuMienPhiDiKem='1', id='1', dienTichSudung='1', chiPhiThue='1', soNguoiToiDa='1', kieuThue='1'}
+Room{:tenDichVu='a'dichVuMienPhiDiKem='1', id='1', dienTichSudung='4', chiPhiThue='1', soNguoiToiDa='1', kieuThue='1'}
+Room{:tenDichVu='a'dichVuMienPhiDiKem='1', id='1', dienTichSudung='4', chiPhiThue='1', soNguoiToiDa='1', kieuThue='1'}
+Room{:tenDichVu='aa'dichVuMienPhiDiKem='1', id='1', dienTichSudung='1', chiPhiThue='1', soNguoiToiDa='1', kieuThue='1'}
+Room{:tenDichVu='Aa'dichVuMienPhiDiKem='food', id='1', dienTichSudung='30.0', chiPhiThue='10.0', soNguoiToiDa='10', kieuThue='a'}
+Room{:tenDichVu='Aa'dichVuMienPhiDiKem='food', id='1', dienTichSudung='30.0', chiPhiThue='12.0', soNguoiToiDa='10', kieuThue='10'}

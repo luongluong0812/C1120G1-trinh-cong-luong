@@ -6,7 +6,7 @@ public class testMain {
     public static void main(String[] args) {
         ProductManager productManager = new ProductManager();
         Scanner input = new Scanner(System.in);
-       productManager.next();
+        productManager.next();
 
         int value = input.nextInt();
         boolean check = false;
@@ -28,29 +28,46 @@ public class testMain {
                     value = input.nextInt();
                     break;
                 case 4:
-                    productManager.seach();
+                    System.out.println("ban muon tim theo?");
+                    System.out.println("1.theo ten:");
+                    System.out.println("2:theo gia:");
+                    int chose = input.nextInt();
+                    switch (chose) {
+                        case 1:
+                            System.out.println("nhap ten");
+                            productManager.seach();
+                            productManager.next();
+                            value = input.nextInt();
+                            break;
+                        case 2:
+                            System.out.println("nhap gia");
+                            productManager.searchPrice();
+                            productManager.next();
+                            value = input.nextInt();
+                            break;
+
+                    }
+
+                case 5:
+                    productManager.edit();
                     productManager.next();
                     value = input.nextInt();
                     break;
-                case 5:productManager.edit();
-                productManager.next();
-                value=input.nextInt();
-                break;
                 case 6:
                     System.out.println("ban muon sap xep theo??");
                     System.out.println("1:theo ten san pham");
                     System.out.println("2:theo gia san pham");
-                    int chose6=input.nextInt();
-                    if(chose6==1){
+                    int chose6 = input.nextInt();
+                    if (chose6 == 1) {
                         productManager.sortByName();
                         productManager.next();
-                        value=input.nextInt();
+                        value = input.nextInt();
                         break;
                     }
-                    if(chose6==2){
+                    if (chose6 == 2) {
                         productManager.sortByPrice();
                         productManager.next();
-                        value=input.nextInt();
+                        value = input.nextInt();
                         break;
                     }
 

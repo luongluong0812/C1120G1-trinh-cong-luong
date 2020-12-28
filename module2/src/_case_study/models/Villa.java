@@ -1,10 +1,13 @@
 package _case_study.models;
 
+import java.util.Scanner;
+
 public class Villa extends Services{
-    private  String tieuChuanPhong;
-    private  String moTaTienNghi;
-    private  String soTang;
-    private double dienTichHoBoi;
+    Scanner input=new Scanner(System.in);
+    public   String tieuChuanPhong;
+    public   String moTaTienNghi;
+    public   String soTang;
+    public double dienTichHoBoi;
 
     public Villa() {
     }
@@ -54,13 +57,43 @@ public class Villa extends Services{
     }
 
     @Override
-    public String showInfor() {
-        String str= "id: "+getId()+" tenDichVu: "+getTenDichVu()+" dienTichSudung: "+getDienTichSudung()+
-                " chiPhiThue: "+getChiPhiThue()+" soNguoiToiDa: "+getSoNguoiToiDa()+" kieuThue: "+getKieuThue()+
-                "dien tich h boi"+getDienTichHoBoi();
-        return str;
+    public String toString() {
+        return "Villa{" +
+                "tieuChuanPhong='" + tieuChuanPhong + '\'' +
+                ", moTaTienNghi='" + moTaTienNghi + '\'' +
+                ", soTang='" + soTang + '\'' +
+                ", dienTichHoBoi=" + dienTichHoBoi +
+                ", id='" + id + '\'' +
+                ", tenDichVu='" + tenDichVu + '\'' +
+                ", dienTichSudung='" + dienTichSudung + '\'' +
+                ", chiPhiThue='" + chiPhiThue + '\'' +
+                ", soNguoiToiDa='" + soNguoiToiDa + '\'' +
+                ", kieuThue='" + kieuThue + '\'' +
+                '}';
     }
-
-
-
+    public void showInfo(){
+        System.out.println(toString());
+    }
+    public void inputVilla(){
+        System.out.println("nhap id");
+        id=input.nextLine();
+        System.out.println("nhap ten dich vu");
+        tenDichVu=input.nextLine();
+        System.out.println("nhap dien tich su dung");
+        dienTichSudung=input.nextLine();
+        System.out.println("nhap chi phi thue");
+        chiPhiThue=input.nextLine();
+        System.out.println("nhap so nguoi toi da");
+        soNguoiToiDa=input.nextLine();
+        System.out.println("nhap kei thue");
+        kieuThue=input.nextLine();
+        System.out.println("nhap tieu chuan phong");
+        tieuChuanPhong=input.nextLine();
+        System.out.println("mo ta tien nghi");
+        moTaTienNghi=input.nextLine();
+        System.out.println("so tang");
+        soTang=input.nextLine();
+        System.out.println("nhap dien tich ho boi");
+        dienTichHoBoi=input.nextDouble();
+    }
 }
