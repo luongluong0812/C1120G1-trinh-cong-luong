@@ -2,7 +2,7 @@ package _case_study.models;
 
 import java.util.Scanner;
 
-public class House extends Services {
+public class House extends Services implements Comparable<House> {
     Scanner input=new Scanner(System.in);
     private  String tieuChuanPhong;
     private  String moTaTienNghi;
@@ -48,17 +48,12 @@ public class House extends Services {
 
     @Override
     public String toString() {
-        return "House{" +
-                ": tenDichVu='" + tenDichVu + '\'' +
-                "tieuChuanPhong='" + tieuChuanPhong + '\'' +
-                ", moTaTienNghi='" + moTaTienNghi + '\'' +
-                ", soTang='" + soTang + '\'' +
-                ", id='" + id + '\'' +
-                ", dienTichSudung='" + dienTichSudung + '\'' +
-                ", chiPhiThue='" + chiPhiThue + '\'' +
-                ", soNguoiToiDa='" + soNguoiToiDa + '\'' +
-                ", kieuThue='" + kieuThue + '\'' +
-                '}';
+        return id +  ","+ tenDichVu + "," + dienTichSudung + "," + chiPhiThue + "," + soNguoiToiDa + "," + kieuThue +
+                "," + tieuChuanPhong + "," + moTaTienNghi + "," + soTang ;
+
+
+
+
     }
     public void showInfo(){
         System.out.println(toString());
@@ -140,5 +135,10 @@ public class House extends Services {
                check=true;
            }
        }while (!check);
+    }
+
+    @Override
+    public int compareTo(House house) {
+        return this.getTenDichVu().compareTo(house.getTenDichVu());
     }
 }

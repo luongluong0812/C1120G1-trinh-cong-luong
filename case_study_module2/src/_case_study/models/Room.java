@@ -2,19 +2,15 @@ package _case_study.models;
 
 import java.util.Scanner;
 
-public class Room extends Services{
+public class Room extends Services implements Comparable<Room>{
     Scanner input=new Scanner(System.in);
     private String dichVuMienPhiDiKem;
 
     public Room() {
     }
-
     public Room(int id, String tenDichVu, double dienTichSudung, double chiPhiThue, int soNguoiToiDa, String kieuThue) {
         super(id, tenDichVu, dienTichSudung, chiPhiThue, soNguoiToiDa, kieuThue);
     }
-
-
-
     public Room(int id, String tenDichVu, double dienTichSudung, double chiPhiThue, int soNguoiToiDa, String kieuThue, String dichVuMienPhiDiKem) {
         super(id, tenDichVu, dienTichSudung, chiPhiThue, soNguoiToiDa, kieuThue);
         this.dichVuMienPhiDiKem = dichVuMienPhiDiKem;
@@ -30,15 +26,14 @@ public class Room extends Services{
 
     @Override
     public String toString() {
-        return "Room{" +
-                ":tenDichVu='" + tenDichVu + '\'' +
-                "dichVuMienPhiDiKem='" + dichVuMienPhiDiKem + '\'' +
-                ", id='" + id + '\'' +
-                ", dienTichSudung='" + dienTichSudung + '\'' +
-                ", chiPhiThue='" + chiPhiThue + '\'' +
-                ", soNguoiToiDa='" + soNguoiToiDa + '\'' +
-                ", kieuThue='" + kieuThue + '\'' +
-                '}';
+        return  id +
+                "," + tenDichVu +
+                "," + dienTichSudung +
+                "," + chiPhiThue +
+                "," + soNguoiToiDa +
+                "," + kieuThue +
+                "," + dichVuMienPhiDiKem
+                ;
     }
     public void showInfo(){
         System.out.println(toString());
@@ -57,8 +52,7 @@ public class Room extends Services{
             }
 
         }while (!check);
-//        System.out.println("nhap ten dich vu");
-//        tenDichVu=input.nextLine();
+
         check=false;
         do {
             System.out.println("nhap dien tich su dung");
@@ -78,8 +72,7 @@ public class Room extends Services{
             } else check=true;
         }while (!check);
 
-//        System.out.println("nhap chi phi thue");
-//        chiPhiThue=Double.parseDouble(input.nextLine());
+
         check=false;
      do {
          System.out.println("nhap so nguoi toi da");
@@ -102,5 +95,10 @@ public class Room extends Services{
            }
         }while (!check);
 
+    }
+
+    @Override
+    public int compareTo(Room room) {
+        return this.tenDichVu.compareTo(room.getTenDichVu());
     }
 }

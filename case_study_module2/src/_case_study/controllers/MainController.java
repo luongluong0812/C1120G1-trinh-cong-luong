@@ -1,12 +1,12 @@
 package _case_study.controllers;
 
-import _case_study.models.Customer;
-import _case_study.models.House;
-import _case_study.models.Room;
-import _case_study.models.Villa;
+import _case_study.models.*;
 
+import java.awt.*;
 import java.io.*;
+import java.nio.charset.IllegalCharsetNameException;
 import java.util.*;
+import java.util.List;
 
 public class MainController {
     Scanner scanner = new Scanner(System.in);
@@ -14,6 +14,7 @@ public class MainController {
     private static List<House> houseList = new ArrayList<>();
     private static List<Room> roomList = new ArrayList<>();
     private static List<Customer> customerList = new ArrayList<>();
+    public static int countId;
 
     public MainController() {
     }
@@ -41,11 +42,50 @@ public class MainController {
                     addNewCustomer();
 
                     break;
-                case 4:showInfoCustomer();
+                case 4:
+                    showInfoCustomer();
                     break;
                 case 5:
+                    addNewBooking();
                     break;
                 case 6:
+
+                    List<Employee> employeeList = new ArrayList<>();
+                    try {
+                        FileReader fileReader = new FileReader("src/_case_study/data/Employee.csv");
+                        BufferedReader bufferedReader = new BufferedReader(fileReader);
+                        String line = "";
+                        Map<Integer, Employee> map = null;
+                        while (true) {
+                            line = bufferedReader.readLine();
+                            if (line == null) {
+                                break;
+                            }
+                            String[] arrEmployee = line.split(",");
+                            String hoTen = arrEmployee[0];
+                            String ngaySinh = arrEmployee[1];
+                            String CMND = arrEmployee[2];
+                            int sDT = Integer.parseInt(arrEmployee[3]);
+                            String email = arrEmployee[4];
+                            String trinhDo = arrEmployee[5];
+                            String viTri = arrEmployee[6];
+                            double luong = Double.parseDouble(arrEmployee[7]);
+                            employeeList.add(new Employee(hoTen, ngaySinh, CMND, sDT, email, trinhDo, viTri, luong));
+
+                        }
+                        map = new TreeMap<>();
+                        for (Employee e : employeeList) {
+                            map.put(++countId, e);
+
+                        }
+                        for (Map.Entry<Integer, Employee> entry : map.entrySet()) {
+                            System.out.println(entry.getKey() + ":" + entry.getValue());
+                        }
+                    } catch (FileNotFoundException e) {
+                        e.printStackTrace();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
                     break;
                 case 7:
                     check = true;
@@ -55,63 +95,6 @@ public class MainController {
 
     }
 
-//    public String inputId() {
-//        System.out.println("nhap id:");
-//        return scanner.nextLine();
-//
-//
-//    }
-//
-//    public String inputTenDichVu() {
-//        System.out.println("nhap ten dich vu:");
-//        return scanner.nextLine();
-//    }
-//
-//    public String inputDienTichSudung() {
-//        System.out.println("dien tich su dung:");
-//        return scanner.nextLine();
-//    }
-//
-//    public String inputChiPhiThue() {
-//        System.out.println("chi phi thue");
-//        return scanner.nextLine();
-//
-//    }
-//
-//    public String inputSoNguoiToiDa() {
-//        System.out.println("so nguoi toi da");
-//        return scanner.nextLine();
-//    }
-//
-//    public String inputKieuThue() {
-//        System.out.println("kieuThue");
-//        return scanner.nextLine();
-//    }
-//
-//    public String inputDichVuMienPhiDiKem() {
-//        System.out.println("nhap dich vi mien phi di kem");
-//        return scanner.nextLine();
-//    }
-//
-//    public String inputTieuChuanPhong() {
-//        System.out.println("nhap tieu chuan phong");
-//        return scanner.nextLine();
-//    }
-//
-//    public String inputMoTaTienNghi() {
-//        System.out.println("nhap mo ta tien nghi");
-//        return scanner.nextLine();
-//    }
-//
-//    public String inputSoTang() {
-//        System.out.println("nhap so tang");
-//        return scanner.nextLine();
-//    }
-//
-//    public double inputDienTichHoBoi() {
-//        System.out.println("nhap dien ticgh ho boi");
-//        return scanner.nextDouble();
-//    }
 
     public void addNewServices() {
 
@@ -130,9 +113,9 @@ public class MainController {
                     villa.inputVilla();
                     villaList.add(villa);
                     try {
-                        FileWriter fileWriter=new FileWriter("src/_case_study/data/Villa.csv",true);
-                        BufferedWriter bufferedWriter=new BufferedWriter(fileWriter);
-                        for (Villa v:villaList) {
+                        FileWriter fileWriter = new FileWriter("src/_case_study/data/Villa.csv");
+                        BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
+                        for (Villa v : villaList) {
                             bufferedWriter.write(String.valueOf(v));
                             bufferedWriter.newLine();
                         }
@@ -147,9 +130,9 @@ public class MainController {
                     h.inputHouse();
                     houseList.add(h);
                     try {
-                        FileWriter fileWriter=new FileWriter("src/_case_study/data/House.csv",true);
-                        BufferedWriter bufferedWriter=new BufferedWriter(fileWriter);
-                        for (House house:houseList) {
+                        FileWriter fileWriter = new FileWriter("src/_case_study/data/House.csv");
+                        BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
+                        for (House house : houseList) {
                             bufferedWriter.write(String.valueOf(house));
                             bufferedWriter.newLine();
                         }
@@ -164,9 +147,9 @@ public class MainController {
                     r.inputRoom();
                     roomList.add(r);
                     try {
-                        FileWriter fileWriter=new FileWriter("src/_case_study/data/Room.csv",true);
-                        BufferedWriter bufferedWriter=new BufferedWriter(fileWriter);
-                        for (Room room:roomList) {
+                        FileWriter fileWriter = new FileWriter("src/_case_study/data/Room.csv");
+                        BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
+                        for (Room room : roomList) {
                             bufferedWriter.write(String.valueOf(room));
                             bufferedWriter.newLine();
                         }
@@ -206,55 +189,36 @@ public class MainController {
             switch (chose) {
                 case 1:
                     try {
-                        FileReader fileReader=new FileReader("src/_case_study/data/Villa.csv");
-                        BufferedReader bufferedReade=new BufferedReader(fileReader);
+                        FileReader fileReader = new FileReader("src/_case_study/data/Villa.csv");
+                        BufferedReader bufferedReade = new BufferedReader(fileReader);
 
-                       String line=null;
-                       while (true){
-                           line= bufferedReade.readLine();
-                           if(line==null){
-                               break;
-                           }
-//                          String [] villa=line.split(";");
-//                           String id=villa[0];
-//                           String tenDichVu=villa[1];
-//                           String dienTichSudung=villa[2];
-//                           String chiPhiThue=villa[3];
-//                           String soNguoiToiDa=villa[4];
-//                           String kieuThue=villa[5];
-//                           String tieuChuanPhong=villa[6];
-//                           String moTaTienNghi=villa[7];
-//                           String soTang=villa[8];
-//                           String dienTichHoBoi=villa[9];
-                           System.out.println(line);
+                        String line = null;
+                        while (true) {
+                            line = bufferedReade.readLine();
+                            if (line == null) {
+                                break;
+                            }
+
+                            System.out.println(line);
 
 
-
-                       }
+                        }
                     } catch (FileNotFoundException e) {
                         e.printStackTrace();
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
                     break;
-//                String [] txt =line.split(";");
-//                String name=txt[0];
-//                int age=Integer.parseInt(txt[1]);
-//                int mark=Integer.parseInt(txt[2]);
-//                Student st=new Student(name,age,mark);
-//                list.add(st);
-//    public Villa(String id, String tenDichVu, String dienTichSudung, String chiPhiThue, String soNguoiToiDa, String kieuThue, String tieuChuanPhong, String moTaTienNghi, String soTang, double dienTichHoBoi) {
-//
-//                System.out.println(line);
+
                 case 2:
                     try {
-                        FileReader fileReader=new FileReader("src/_case_study/data/House.csv");
-                        BufferedReader bufferedReade=new BufferedReader(fileReader);
+                        FileReader fileReader = new FileReader("src/_case_study/data/House.csv");
+                        BufferedReader bufferedReade = new BufferedReader(fileReader);
 
-                        String line="";
-                        while (true){
-                            line= bufferedReade.readLine();
-                            if(line==null){
+                        String line = "";
+                        while (true) {
+                            line = bufferedReade.readLine();
+                            if (line == null) {
                                 break;
                             }
                             System.out.println(line);
@@ -267,13 +231,13 @@ public class MainController {
                     break;
                 case 3:
                     try {
-                        FileReader fileReader=new FileReader("src/_case_study/data/Room.csv");
-                        BufferedReader bufferedReade=new BufferedReader(fileReader);
+                        FileReader fileReader = new FileReader("src/_case_study/data/Room.csv");
+                        BufferedReader bufferedReade = new BufferedReader(fileReader);
 
-                        String line="";
-                        while (true){
-                            line= bufferedReade.readLine();
-                            if(line==null){
+                        String line = "";
+                        while (true) {
+                            line = bufferedReade.readLine();
+                            if (line == null) {
                                 break;
                             }
                             System.out.println(line);
@@ -286,44 +250,113 @@ public class MainController {
                     break;
 
                 case 4:
-                    List<Villa> arr=new ArrayList<>();
-                    for (int i=0;i<villaList.size();i++){
-                        if(!arr.contains(villaList.get(i).getTenDichVu())){
-                            arr.add(villaList.get(i));
+                    List<Villa> list = new ArrayList<>();
+                    try {
+                        FileReader fileReader = new FileReader("src/_case_study/data/Villa.csv");
+                        BufferedReader bufferedReader = new BufferedReader(fileReader);
+                        String line = "";
+                        while (true) {
+                            line = bufferedReader.readLine();
+                            if (line == null) {
+                                break;
+                            }
+                            String[] txt = line.split(",");
+                            int id = Integer.parseInt(txt[0]);
+                            String tenDichvu = txt[1];
+                            double dienTichSuDung = Double.parseDouble(txt[2]);
+                            double chiPhiThue = Double.parseDouble(txt[3]);
+                            int soNguoiToiDa = Integer.parseInt(txt[4]);
+                            String kieuThue = txt[5];
+                            String tieuChuanPhong = txt[6];
+                            String moTaTienNghi = txt[7];
+                            int soTang = Integer.parseInt(txt[8]);
+                            double dienTichHoBoi = Double.parseDouble(txt[9]);
+                            list.add(new Villa(id, tenDichvu, dienTichSuDung, chiPhiThue, soNguoiToiDa, kieuThue, tieuChuanPhong, moTaTienNghi, soTang, dienTichHoBoi));
                         }
-                    }
-                    for (Villa v:arr
-                         ) {
-                        v.showInfo();
-                    }
+                        TreeSet<Villa> villaTreeSet = new TreeSet<>(list);
+                        villaTreeSet.addAll(list);
+                        for (Villa v : villaTreeSet) {
+                            v.showInfo();
+                        }
 
-//                    HashSet<Villa> villaHashSet = new HashSet<>(villaList);
-//                    for (int i=0;i<villaList.size();i++){
-//
-//                    }
-//                    for (Villa v:villaHashSet){
-//                        v.showInfo();
-//                    }
-//                      List<String> listWithoutDuplicateElements = new ArrayList<String>();
-//        for (String element : listWithDuplicateElements) {
-//            // Check if element not exist in list, perform add element to list
-//            if (!listWithoutDuplicateElements.contains(element)) {
-//                listWithoutDuplicateElements.add(element);
-//            }
-//        }
-//
-//                    // xóa các phần tử của arrListNumber
-//                    arrListNumber.clear();
-//
-//                    // thêm tất cả các phần tử của arrTemp vào arrListNumber
-//                    // lúc này ta sẽ có 1 ArrayList arrListNumber
-//                    // không chứa các phần tử trùng nhau
-//                    arrListNumber.addAll(arrTemp);
 
+                    } catch (FileNotFoundException e) {
+                        e.printStackTrace();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
                     break;
                 case 5:
+                    List<House> houseList = new ArrayList<>();
+                    try {
+                        FileReader fileReader = new FileReader("src/_case_study/data/House.csv");
+                        BufferedReader bufferedReader = new BufferedReader(fileReader);
+                        String line = "";
+                        while (true) {
+                            line = bufferedReader.readLine();
+                            if (line == null) {
+                                break;
+                            }
+                            String[] arrRoom = line.split(",");
+                            //    public House(int id, String tenDichVu, double dienTichSudung, double chiPhiThue, int soNguoiToiDa, String kieuThue, String tieuChuanPhong, String moTaTienNghi, int soTang) {
+                            int id = Integer.parseInt(arrRoom[0]);
+                            String tenDichVu = arrRoom[1];
+                            double dienTichSudung = Double.parseDouble(arrRoom[2]);
+                            double chiPhiThue = Double.parseDouble(arrRoom[3]);
+                            int soNguoiToiDa = Integer.parseInt(arrRoom[4]);
+                            String kieuThue = arrRoom[5];
+                            String tieuChuanPhong = arrRoom[6];
+                            String moTaTienNghi = arrRoom[7];
+                            int soTang = Integer.parseInt(arrRoom[8]);
+                            houseList.add(new House(id, tenDichVu, dienTichSudung, chiPhiThue, soNguoiToiDa, kieuThue, tieuChuanPhong, moTaTienNghi, soTang));
+                        }
+                        TreeSet<House> houseTreeSet = new TreeSet<>(houseList);
+                        houseTreeSet.addAll(houseList);
+                        for (House house : houseTreeSet) {
+                            house.showInfo();
+                        }
+                    } catch (FileNotFoundException e) {
+                        e.printStackTrace();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+
                     break;
                 case 6:
+                    List<Room> listRoom = new ArrayList<>();
+                    FileReader fileReader = null;
+                    try {
+                        fileReader = new FileReader("src/_case_study/data/Room.csv");
+                    } catch (FileNotFoundException e) {
+                        e.printStackTrace();
+                    }
+                    BufferedReader bufferedReader = new BufferedReader(fileReader);
+                    String line = "";
+
+                    while (true) {
+                        try {
+                            line = bufferedReader.readLine();
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
+                        if (line == null) {
+                            break;
+                        }
+                        String[] txt = line.split(",");
+                        int id = Integer.parseInt(txt[0]);
+                        String tenDichVu = txt[1];
+                        double dienTichSudung = Double.parseDouble(txt[2]);
+                        double chiPhiThue = Double.parseDouble(txt[3]);
+                        int soNguoiToiDa = Integer.parseInt(txt[4]);
+                        String kieuThue = txt[5];
+                        String dichVuMienPhiDiKem = txt[6];
+                        listRoom.add(new Room(id, tenDichVu, dienTichSudung, chiPhiThue, soNguoiToiDa, kieuThue, dichVuMienPhiDiKem));
+                    }
+                    TreeSet<Room> roomTreeSet = new TreeSet<>(listRoom);
+                    roomTreeSet.addAll(listRoom);
+                    for (Room room : roomTreeSet) {
+                        room.showInfo();
+                    }
                     break;
                 case 7:
                     break;
@@ -342,14 +375,188 @@ public class MainController {
         Customer customer = new Customer();
         customer.inputCustomer();
         customerList.add(customer);
-    }
-    public  void showInfoCustomer(){
-        for (Customer cus:customerList
-             ) { cus.showInfo();
-
+        try {
+            FileWriter fileWriter = new FileWriter("src/_case_study/data/Customer.csv");
+            BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
+            for (Customer c : customerList) {
+                bufferedWriter.write(String.valueOf(c));
+                bufferedWriter.newLine();
+            }
+            bufferedWriter.close();
+            fileWriter.close();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
-    public  void addNewBooking(){
+
+    public void showInfoCustomer() {
+         List<Customer> customerList=new ArrayList<>();//tao list tam
+
+        try {
+            FileReader fileReader = new FileReader("src/_case_study/data/Customer.csv");
+            BufferedReader bufferedReader = new BufferedReader(fileReader);
+            String line = "";
+            while (true) {
+                line = bufferedReader.readLine();
+                if (line == null) {
+                    break;
+                }
+                String[] txt = line.split(",");
+                String hoVaTen = txt[0];
+                String ngaySinh=txt[1];
+                String gioiTinh=txt[2];
+                String CMND=txt[3];
+                String soDT=txt[4];
+                String email=txt[5];
+                String loaiKH=txt[6];
+                String diaChi=txt[7];
+                //    public Customer(String hoVaTen, String ngaySinh, String gioiTinh, String CMND, String soDT, String email, String loaiKH, String diaChi) {
+                customerList.add(new Customer(hoVaTen,ngaySinh,gioiTinh,CMND,soDT,email,loaiKH,diaChi));
+
+            }
+            Collections.sort(customerList, new Comparator<Customer>() {
+                @Override
+                public int compare(Customer c, Customer c1) {
+                    int ten=c.getHoVaTen().compareTo(c1.getHoVaTen());
+                    if(ten>0) return 1;
+                    if(ten<0) return -1;
+                   else  return 0;
+
+                }
+            });
+            for (Customer c: customerList) {
+                c.showInfo();
+            }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
     }
+
+    public void addNewBooking() {
+        List<Customer> customerList=new ArrayList<>();
+        try {
+            FileReader fileReader=new FileReader("src/_case_study/data/Customer.csv");
+            BufferedReader bufferedReader=new BufferedReader(fileReader);
+            String line="";
+            while (true){
+                line=bufferedReader.readLine();
+                if(line==null){
+                    break;
+                }
+                String txt[]=line.split(",");
+                //(String hoVaTen, String ngaySinh, String gioiTinh, , , , ,) {
+                String hoVaTen=txt[0];
+                String ngaySinh=txt[1];
+                String gioiTinh=txt[2];
+                String CMND=txt[3];
+                String soDT=txt[4];
+                String email=txt[5];
+                String loaiKH=txt[6];
+                String diaChi=txt[7];
+                customerList.add(new Customer(hoVaTen,ngaySinh,gioiTinh,CMND,soDT,email,loaiKH,diaChi));
+            }
+            Collections.sort(customerList, new Comparator<Customer>() {
+                @Override
+                public int compare(Customer c1, Customer c2) {
+                    return c1.getHoVaTen().compareTo(c2.getHoVaTen());
+                }
+            });
+            Scanner input=new Scanner(System.in);
+
+            int temp=1;
+            for (Customer c: customerList) {
+                System.out.println(temp+"."+ c.toString());
+                temp++;
+            }
+            System.out.println("you choose");
+            int choose=Integer.parseInt(input.nextLine());
+            Customer customerBooking=customerList.get(choose-1);
+
+
+
+
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        Scanner input = new Scanner(System.in);
+        int choose;
+        do {
+            choose = Integer.parseInt(input.nextLine());
+            System.out.println("1.\tBooking Villa");
+            System.out.println("2.\tBooking House");
+            System.out.println("3.\tBooking Room");
+            System.out.println("4.thoat");
+            switch (choose) {
+                case 1:
+                    try {
+                        FileReader fileReader = new FileReader("src/_case_study/data/Villa.csv");
+                        BufferedReader bufferedReade = new BufferedReader(fileReader);
+
+                        String line = "";
+                        while (true) {
+                            line = bufferedReade.readLine();
+                            if (line == null) {
+                                break;
+                            }
+                            System.out.println(line);
+                        }
+                    } catch (FileNotFoundException e) {
+                        e.printStackTrace();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                    break;
+
+                case 2:
+                    try {
+                        FileReader fileReader = new FileReader("src/_case_study/data/House.csv");
+                        BufferedReader bufferedReade = new BufferedReader(fileReader);
+
+                        String line = "";
+                        while (true) {
+                            line = bufferedReade.readLine();
+                            if (line == null) {
+                                break;
+                            }
+                            System.out.println(line);
+                        }
+                    } catch (FileNotFoundException e) {
+                        e.printStackTrace();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                    break;
+                case 3:
+                    try {
+                        FileReader fileReader = new FileReader("src/_case_study/data/Room.csv");
+                        BufferedReader bufferedReade = new BufferedReader(fileReader);
+
+                        String line = "";
+                        while (true) {
+                            line = bufferedReade.readLine();
+                            if (line == null) {
+                                break;
+                            }
+                            System.out.println(line);
+                        }
+                    } catch (FileNotFoundException e) {
+                        e.printStackTrace();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                    break;
+                case 4:
+                    System.out.println("good bye!");
+                    break;
+            }
+        } while (choose != 4);
+
+    }
+
+
 }

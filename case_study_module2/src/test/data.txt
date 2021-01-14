@@ -1,0 +1,4 @@
+n,n,n,n,n
+n,n,n,n,n
+k,k,k,k,k
+o,o,o,o,o

@@ -90,15 +90,13 @@ public class Employee {
 
     @Override
     public String toString() {
-        return "Employee{" +
-                "hoTen='" + hoTen + '\'' +
-                ", ngaySinh='" + ngaySinh + '\'' +
-                ", CMND='" + CMND + '\'' +
-                ", sDT=" + sDT +
-                ", email='" + email + '\'' +
-                ", trinhDo='" + trinhDo + '\'' +
-                ", viTri='" + viTri + '\'' +
-                ", luong=" + luong +
-                '}';
+        return  hoTen +
+                "," + ngaySinh +
+                "," + CMND  +
+                "," + sDT +
+                "," + email +
+                "," + trinhDo +
+                "," + viTri +
+                "," + luong ;
     }
 }

@@ -3,7 +3,7 @@ package _case_study.models;
 import java.util.Objects;
 import java.util.Scanner;
 
-public class Villa extends Services{
+public class Villa extends Services implements Comparable<Villa>{
     Scanner input=new Scanner(System.in);
     public   String tieuChuanPhong;
     public   String moTaTienNghi;
@@ -13,8 +13,13 @@ public class Villa extends Services{
     public Villa() {
     }
 
-    public Villa(int id, String tenDichVu, double dienTichSudung, double chiPhiThue, int soNguoiToiDa, String kieuThue) {
-        super(id, tenDichVu, dienTichSudung, chiPhiThue, soNguoiToiDa, kieuThue);
+    public Villa(Scanner input, String tieuChuanPhong, String moTaTienNghi, int soTang, double dienTichHoBoi) {
+        this.input = input;
+        this.tieuChuanPhong = tieuChuanPhong;
+        this.moTaTienNghi = moTaTienNghi;
+        this.soTang = soTang;
+        this.dienTichHoBoi = dienTichHoBoi;
+
     }
 
     public Villa(int id, String tenDichVu, double dienTichSudung, double chiPhiThue, int soNguoiToiDa, String kieuThue, String tieuChuanPhong, String moTaTienNghi, int soTang, double dienTichHoBoi) {
@@ -24,6 +29,15 @@ public class Villa extends Services{
         this.soTang = soTang;
         this.dienTichHoBoi = dienTichHoBoi;
     }
+
+//    public Villa(String tenDichVu, String tieuChuanPhong, String moTaTienNghi, int soTang, double dienTichHoBoi,int id,  double dienTichSudung, double chiPhiThue, int soNguoiToiDa, String kieuThue) {
+//        super(id, tenDichVu, dienTichSudung, chiPhiThue, soNguoiToiDa, kieuThue);
+//
+//        this.tieuChuanPhong = tieuChuanPhong;
+//        this.moTaTienNghi = moTaTienNghi;
+//        this.soTang = soTang;
+//        this.dienTichHoBoi = dienTichHoBoi;
+//    }
 
     public String getTieuChuanPhong() {
         return tieuChuanPhong;
@@ -59,19 +73,18 @@ public class Villa extends Services{
 
     @Override
     public String toString() {
-        return "Villa{" +
-                ":tenDichVu='" + tenDichVu + '\'' +
-                "tieuChuanPhong='" + tieuChuanPhong + '\'' +
-                ", moTaTienNghi='" + moTaTienNghi + '\'' +
-                ", soTang='" + soTang + '\'' +
-                ", dienTichHoBoi=" + dienTichHoBoi +
-                ", id='" + id + '\'' +
-                ", dienTichSudung='" + dienTichSudung + '\'' +
-                ", chiPhiThue='" + chiPhiThue + '\'' +
-                ", soNguoiToiDa='" + soNguoiToiDa + '\'' +
-                ", kieuThue='" + kieuThue + '\'' +
-                '}';
+        return id +
+                "," + tenDichVu +
+                "," + dienTichSudung +
+                "," + chiPhiThue +
+                "," + soNguoiToiDa +
+                "," + kieuThue +
+                "," + tieuChuanPhong +
+                "," + moTaTienNghi +
+                "," + soTang +
+                "," + dienTichHoBoi ;
     }
+
     public void showInfo(){
         System.out.println(toString());
     }
@@ -156,20 +169,27 @@ public class Villa extends Services{
     }
 
     @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        if (!super.equals(o)) return false;
-        Villa villa = (Villa) o;
-        return Double.compare(villa.dienTichHoBoi, dienTichHoBoi) == 0 &&
-                Objects.equals(input, villa.input) &&
-                Objects.equals(tieuChuanPhong, villa.tieuChuanPhong) &&
-                Objects.equals(moTaTienNghi, villa.moTaTienNghi) &&
-                Objects.equals(soTang, villa.soTang);
+    public int compareTo(Villa villa) {
+        return this.getTenDichVu().compareTo(villa.getTenDichVu());
     }
 
-    @Override
-    public int hashCode() {
-        return Objects.hash(super.hashCode(), input, tieuChuanPhong, moTaTienNghi, soTang, dienTichHoBoi);
-    }
+//    @Override
+//    public boolean equals(Object o) {
+//        if (this == o) return true;
+//        if (o == null || getClass() != o.getClass()) return false;
+//        if (!super.equals(o)) return false;
+//        Villa villa = (Villa) o;
+//        return Double.compare(villa.dienTichHoBoi, dienTichHoBoi) == 0 &&
+//                Objects.equals(input, villa.input) &&
+//                Objects.equals(tieuChuanPhong, villa.tieuChuanPhong) &&
+//                Objects.equals(moTaTienNghi, villa.moTaTienNghi) &&
+//                Objects.equals(soTang, villa.soTang);
+//    }
+//
+//    @Override
+//    public int hashCode() {
+//        return Objects.hash(super.hashCode(), input, tieuChuanPhong, moTaTienNghi, soTang, dienTichHoBoi);
+//    }
+
+
 }
