@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kho truyện 18+</title>
+    <style>
+        .thumbnail {
+            width: 500px;
+            height: 300px;
+            overflow: hidden;
+            border: 1px solid #e5e5e5;
+        }
+
+        .thumbnail img {
+            width: 100%;
+            height: 100%;
+            transition-duration: 0.3s;
+        }
+
+        .thumbnail img:hover {
+            transform: scale(1.2);
+        }
+
+        #quang_cao {
+            position: fixed;
+            bottom: 250px;
+            right: 0px;
+            color: blue;
+        }
+
+        body {
+            height: 2000px;
+            background: blue;
+        }
+
+
+        #trang_chu {
+            font-size: 50px;
+            color: white;
+
+
+        }
+
+        .mau_sac {
+            background: rgba(14, 20, 35, 0.95);
+        }
+
+        .sticky {
+            position: -webkit-sticky;
+            position: sticky;
+            top: 0;
+            background: #241940;
+            width: 100%;
+        }
+
+        table {
+            border-collapse: collapse
+        }
+
+        #ab {
+            position: fixed;
+            top: 20px;
+            left: 100px;
+
+
+        }
+
+        .canhle {
+            margin: 20px auto;
+        }
+
+
+    </style>
+</head>
+<body class="mau_sac">
+<table class="sticky" border="0">
+    <tr>
+        <th>
+            <h onclick="trang_chu()" id="trang_chu">Trang chủ</h>
+        </th>
+        <th>
+            <h onclick="danh_sach()" id="trang_chu">Danh sach</h>
+        </th>
+        <th>
+            <h onclick="the_loai()" id="trang_chu">Thể loại</h>
+        </th>
+        <th>
+            <h onclick="tuy_chinh()" id="trang_chu">Tùy chỉnh</h>
+        </th>
+        <th>
+            <h><input value="nhap vao de tim"></h>
+        </th>
+        <th>
+            <h><a href="https://www.google.com/"><img src="kinh.jpg" width="20" height="20"> </a></h>
+        </th>
+
+
+    </tr>
+
+</table>
+<table class="canhle">
+    <tr>
+        <td rowspan="4"><a href="https://sachvui.com/doc-sach/doremon-truyen-dai-fujiko-f-fujio/tap-1-phan-1.html"><img
+                src="doremon.jpg" height="230" width="220"/> </a></td>
+
+    </tr>
+    <tr>
+        <td><a href="https://sachvui.com/doc-sach/doremon-truyen-dai-fujiko-f-fujio/tap-1-phan-1.html"><img
+                src="doremon.jpg" height="100" width="100"/> </a></td>
+        <td><a href="https://sachvui.com/doc-sach/doremon-truyen-dai-fujiko-f-fujio/tap-1-phan-1.html"><img
+                src="riven.jpg" height="100" width="100"/> </a></td>
+        <td><a href="https://sachvui.com/doc-sach/doremon-truyen-dai-fujiko-f-fujio/tap-1-phan-1.html"><img
+                src="tom.jpg" height="100" width="100"/> </a></td>
+        <td><a href="https://sachvui.com/doc-sach/doremon-truyen-dai-fujiko-f-fujio/tap-1-phan-1.html"><img
+                src="gai.jpg" height="100" width="100"/> </a></td>
+        <td><a href="https://sachvui.com/doc-sach/doremon-truyen-dai-fujiko-f-fujio/tap-1-phan-1.html"><img
+                src="gai1.jpg" height="100" width="100"/> </a></td>
+        <td><a href="https://sachvui.com/doc-sach/doremon-truyen-dai-fujiko-f-fujio/tap-1-phan-1.html"><img
+                src="gai2.jpg" height="100" width="100"/> </a></td>
+        <td><a href="https://sachvui.com/doc-sach/doremon-truyen-dai-fujiko-f-fujio/tap-1-phan-1.html"><img
+                src="tom.jpg" height="100" width="100"/> </a></td>
+        <td><a href="https://sachvui.com/doc-sach/doremon-truyen-dai-fujiko-f-fujio/tap-1-phan-1.html"><img
+                src="gai.jpg" height="100" width="100"/> </a></td>
+        <td><a href="https://sachvui.com/doc-sach/doremon-truyen-dai-fujiko-f-fujio/tap-1-phan-1.html"><img
+                src="gai1.jpg" height="100" width="100"/> </a></td>
+        <td><a href="https://sachvui.com/doc-sach/doremon-truyen-dai-fujiko-f-fujio/tap-1-phan-1.html"><img
+                src="gai2.jpg" height="100" width="100"/> </a></td>
+
+    </tr>
+    <tr>
+        <td><a href="https://sachvui.com/doc-sach/doremon-truyen-dai-fujiko-f-fujio/tap-1-phan-1.html">
+            <h style="color: white">Đọc luôn</h>
+        </a></td>
+        <td><a href="https://sachvui.com/doc-sach/doremon-truyen-dai-fujiko-f-fujio/tap-1-phan-1.html">Đọc luôn</a></td>
+        <td><a href="https://sachvui.com/doc-sach/doremon-truyen-dai-fujiko-f-fujio/tap-1-phan-1.html">Đọc luôn</a></td>
+        <td><a href="https://sachvui.com/doc-sach/doremon-truyen-dai-fujiko-f-fujio/tap-1-phan-1.html">Đọc luôn</a></td>
+        <td><a href="https://sachvui.com/doc-sach/doremon-truyen-dai-fujiko-f-fujio/tap-1-phan-1.html">Đọc luôn</a></td>
+        <td><a href="https://sachvui.com/doc-sach/doremon-truyen-dai-fujiko-f-fujio/tap-1-phan-1.html">Đọc luôn</a></td>
+        <td><a href="https://sachvui.com/doc-sach/doremon-truyen-dai-fujiko-f-fujio/tap-1-phan-1.html">Đọc luôn</a></td>
+        <td><a href="https://sachvui.com/doc-sach/doremon-truyen-dai-fujiko-f-fujio/tap-1-phan-1.html">Đọc luôn</a></td>
+        <td><a href="https://sachvui.com/doc-sach/doremon-truyen-dai-fujiko-f-fujio/tap-1-phan-1.html">Đọc luôn</a></td>
+        <td><a href="https://sachvui.com/doc-sach/doremon-truyen-dai-fujiko-f-fujio/tap-1-phan-1.html">Đọc luôn</a></td>
+    </tr>
+    <tr>
+        <td><a href="https://sachvui.com/doc-sach/doremon-truyen-dai-fujiko-f-fujio/tap-1-phan-1.html"><img
+                src="gai4.jpg" height="100" width="100"/> </a></td>
+        <td><a href="https://sachvui.com/doc-sach/doremon-truyen-dai-fujiko-f-fujio/tap-1-phan-1.html"><img
+                src="ngua2.jpg" height="100" width="100"/> </a></td>
+        <td><a href="https://sachvui.com/doc-sach/doremon-truyen-dai-fujiko-f-fujio/tap-1-phan-1.html"><img src="xe.jpg"
+                                                                                                            height="100"
+                                                                                                            width="100"/>
+        </a></td>
+        <td><a href="https://sachvui.com/doc-sach/doremon-truyen-dai-fujiko-f-fujio/tap-1-phan-1.html"><img
+                src="sutu.jpg" height="100" width="100"/> </a></td>
+        <td><a href="https://sachvui.com/doc-sach/doremon-truyen-dai-fujiko-f-fujio/tap-1-phan-1.html"><img src="ho.jpg"
+                                                                                                            height="100"
+                                                                                                            width="100"/>
+        </a></td>
+        <td><a href="https://sachvui.com/doc-sach/doremon-truyen-dai-fujiko-f-fujio/tap-1-phan-1.html"><img
+                src="gai5.jpg" height="100" width="100"/> </a></td>
+        <td><a href="https://sachvui.com/doc-sach/doremon-truyen-dai-fujiko-f-fujio/tap-1-phan-1.html"><img
+                src="tom.jpg" height="100" width="100"/> </a></td>
+        <td><a href="https://sachvui.com/doc-sach/doremon-truyen-dai-fujiko-f-fujio/tap-1-phan-1.html"><img
+                src="gai.jpg" height="100" width="100"/> </a></td>
+        <td><a href="https://sachvui.com/doc-sach/doremon-truyen-dai-fujiko-f-fujio/tap-1-phan-1.html"><img
+                src="gai1.jpg" height="100" width="100"/> </a></td>
+        <td><a href="https://sachvui.com/doc-sach/doremon-truyen-dai-fujiko-f-fujio/tap-1-phan-1.html"><img
+                src="gai2.jpg" height="100" width="100"/> </a></td>
+
+    </tr>
+    <tr>
+        <td><a href="https://sachvui.com/doc-sach/doremon-truyen-dai-fujiko-f-fujio/tap-1-phan-1.html">Đọc luôn </a>
+        </td>
+        <td><a href="https://sachvui.com/doc-sach/doremon-truyen-dai-fujiko-f-fujio/tap-1-phan-1.html">Đọc luôn</a></td>
+        <td><a href="https://sachvui.com/doc-sach/doremon-truyen-dai-fujiko-f-fujio/tap-1-phan-1.html">Đọc luôn</a></td>
+        <td><a href="https://sachvui.com/doc-sach/doremon-truyen-dai-fujiko-f-fujio/tap-1-phan-1.html">Đọc luôn</a></td>
+        <td><a href="https://sachvui.com/doc-sach/doremon-truyen-dai-fujiko-f-fujio/tap-1-phan-1.html">Đọc luôn</a></td>
+        <td><a href="https://sachvui.com/doc-sach/doremon-truyen-dai-fujiko-f-fujio/tap-1-phan-1.html">Đọc luôn</a></td>
+        <td><a href="https://sachvui.com/doc-sach/doremon-truyen-dai-fujiko-f-fujio/tap-1-phan-1.html">Đọc luôn</a></td>
+        <td><a href="https://sachvui.com/doc-sach/doremon-truyen-dai-fujiko-f-fujio/tap-1-phan-1.html">Đọc luôn</a></td>
+        <td><a href="https://sachvui.com/doc-sach/doremon-truyen-dai-fujiko-f-fujio/tap-1-phan-1.html">Đọc luôn</a></td>
+        <td><a href="https://sachvui.com/doc-sach/doremon-truyen-dai-fujiko-f-fujio/tap-1-phan-1.html">Đọc luôn</a></td>
+    </tr>
+    <tr>
+        <td rowspan="4"><a href="https://sachvui.com/doc-sach/doremon-truyen-dai-fujiko-f-fujio/tap-1-phan-1.html"><img
+                src="doremon.jpg" height="230" width="220"/> </a></td>
+
+    </tr>
+    <tr>
+        <td><a href="https://sachvui.com/doc-sach/doremon-truyen-dai-fujiko-f-fujio/tap-1-phan-1.html"><img
+                src="doremon.jpg" height="100" width="100"/> </a></td>
+        <td><a href="https://sachvui.com/doc-sach/doremon-truyen-dai-fujiko-f-fujio/tap-1-phan-1.html"><img
+                src="riven.jpg" height="100" width="100"/> </a></td>
+        <td><a href="https://sachvui.com/doc-sach/doremon-truyen-dai-fujiko-f-fujio/tap-1-phan-1.html"><img
+                src="tom.jpg" height="100" width="100"/> </a></td>
+        <td><a href="https://sachvui.com/doc-sach/doremon-truyen-dai-fujiko-f-fujio/tap-1-phan-1.html"><img
+                src="gai.jpg" height="100" width="100"/> </a></td>
+        <td><a href="https://sachvui.com/doc-sach/doremon-truyen-dai-fujiko-f-fujio/tap-1-phan-1.html"><img
+                src="gai1.jpg" height="100" width="100"/> </a></td>
+        <td><a href="https://sachvui.com/doc-sach/doremon-truyen-dai-fujiko-f-fujio/tap-1-phan-1.html"><img
+                src="gai2.jpg" height="100" width="100"/> </a></td>
+        <td><a href="https://sachvui.com/doc-sach/doremon-truyen-dai-fujiko-f-fujio/tap-1-phan-1.html"><img
+                src="tom.jpg" height="100" width="100"/> </a></td>
+        <td><a href="https://sachvui.com/doc-sach/doremon-truyen-dai-fujiko-f-fujio/tap-1-phan-1.html"><img
+                src="gai.jpg" height="100" width="100"/> </a></td>
+        <td><a href="https://sachvui.com/doc-sach/doremon-truyen-dai-fujiko-f-fujio/tap-1-phan-1.html"><img
+                src="gai1.jpg" height="100" width="100"/> </a></td>
+        <td><a href="https://sachvui.com/doc-sach/doremon-truyen-dai-fujiko-f-fujio/tap-1-phan-1.html"><img
+                src="gai2.jpg" height="100" width="100"/> </a></td>
+
+    </tr>
+    <tr>
+        <td><a href="https://sachvui.com/doc-sach/doremon-truyen-dai-fujiko-f-fujio/tap-1-phan-1.html">Đọc luôn</a></td>
+        <td><a href="https://sachvui.com/doc-sach/doremon-truyen-dai-fujiko-f-fujio/tap-1-phan-1.html">Đọc luôn</a></td>
+        <td><a href="https://sachvui.com/doc-sach/doremon-truyen-dai-fujiko-f-fujio/tap-1-phan-1.html">Đọc luôn</a></td>
+        <td><a href="https://sachvui.com/doc-sach/doremon-truyen-dai-fujiko-f-fujio/tap-1-phan-1.html">Đọc luôn</a></td>
+        <td><a href="https://sachvui.com/doc-sach/doremon-truyen-dai-fujiko-f-fujio/tap-1-phan-1.html">Đọc luôn</a></td>
+        <td><a href="https://sachvui.com/doc-sach/doremon-truyen-dai-fujiko-f-fujio/tap-1-phan-1.html">Đọc luôn</a></td>
+        <td><a href="https://sachvui.com/doc-sach/doremon-truyen-dai-fujiko-f-fujio/tap-1-phan-1.html">Đọc luôn</a></td>
+        <td><a href="https://sachvui.com/doc-sach/doremon-truyen-dai-fujiko-f-fujio/tap-1-phan-1.html">Đọc luôn</a></td>
+        <td><a href="https://sachvui.com/doc-sach/doremon-truyen-dai-fujiko-f-fujio/tap-1-phan-1.html">Đọc luôn</a></td>
+        <td><a href="https://sachvui.com/doc-sach/doremon-truyen-dai-fujiko-f-fujio/tap-1-phan-1.html">Đọc luôn</a></td>
+    </tr>
+    <tr>
+        <td><a href="https://sachvui.com/doc-sach/doremon-truyen-dai-fujiko-f-fujio/tap-1-phan-1.html"><img
+                src="gai4.jpg" height="100" width="100"/> </a></td>
+        <td><a href="https://sachvui.com/doc-sach/doremon-truyen-dai-fujiko-f-fujio/tap-1-phan-1.html"><img
+                src="ngua2.jpg" height="100" width="100"/> </a></td>
+        <td><a href="https://sachvui.com/doc-sach/doremon-truyen-dai-fujiko-f-fujio/tap-1-phan-1.html"><img src="xe.jpg"
+                                                                                                            height="100"
+                                                                                                            width="100"/>
+        </a></td>
+        <td><a href="https://sachvui.com/doc-sach/doremon-truyen-dai-fujiko-f-fujio/tap-1-phan-1.html"><img
+                src="sutu.jpg" height="100" width="100"/> </a></td>
+        <td><a href="https://sachvui.com/doc-sach/doremon-truyen-dai-fujiko-f-fujio/tap-1-phan-1.html"><img src="ho.jpg"
+                                                                                                            height="100"
+                                                                                                            width="100"/>
+        </a></td>
+        <td><a href="https://sachvui.com/doc-sach/doremon-truyen-dai-fujiko-f-fujio/tap-1-phan-1.html"><img
+                src="gai5.jpg" height="100" width="100"/> </a></td>
+        <td><a href="https://sachvui.com/doc-sach/doremon-truyen-dai-fujiko-f-fujio/tap-1-phan-1.html"><img
+                src="tom.jpg" height="100" width="100"/> </a></td>
+        <td><a href="https://sachvui.com/doc-sach/doremon-truyen-dai-fujiko-f-fujio/tap-1-phan-1.html"><img
+                src="gai.jpg" height="100" width="100"/> </a></td>
+        <td><a href="https://sachvui.com/doc-sach/doremon-truyen-dai-fujiko-f-fujio/tap-1-phan-1.html"><img
+                src="gai1.jpg" height="100" width="100"/> </a></td>
+        <td><a href="https://sachvui.com/doc-sach/doremon-truyen-dai-fujiko-f-fujio/tap-1-phan-1.html"><img
+                src="gai2.jpg" height="100" width="100"/> </a></td>
+
+    </tr>
+    <tr>
+        <td><a href="https://sachvui.com/doc-sach/doremon-truyen-dai-fujiko-f-fujio/tap-1-phan-1.html">Đọc luôn </a>
+        </td>
+        <td><a href="https://sachvui.com/doc-sach/doremon-truyen-dai-fujiko-f-fujio/tap-1-phan-1.html">Đọc luôn</a></td>
+        <td><a href="https://sachvui.com/doc-sach/doremon-truyen-dai-fujiko-f-fujio/tap-1-phan-1.html">Đọc luôn</a></td>
+        <td><a href="https://sachvui.com/doc-sach/doremon-truyen-dai-fujiko-f-fujio/tap-1-phan-1.html">Đọc luôn</a></td>
+        <td><a href="https://sachvui.com/doc-sach/doremon-truyen-dai-fujiko-f-fujio/tap-1-phan-1.html">Đọc luôn</a></td>
+        <td><a href="https://sachvui.com/doc-sach/doremon-truyen-dai-fujiko-f-fujio/tap-1-phan-1.html">Đọc luôn</a></td>
+        <td><a href="https://sachvui.com/doc-sach/doremon-truyen-dai-fujiko-f-fujio/tap-1-phan-1.html">Đọc luôn</a></td>
+        <td><a href="https://sachvui.com/doc-sach/doremon-truyen-dai-fujiko-f-fujio/tap-1-phan-1.html">Đọc luôn</a></td>
+        <td><a href="https://sachvui.com/doc-sach/doremon-truyen-dai-fujiko-f-fujio/tap-1-phan-1.html">Đọc luôn</a></td>
+        <td><a href="https://sachvui.com/doc-sach/doremon-truyen-dai-fujiko-f-fujio/tap-1-phan-1.html">Đọc luôn</a></td>
+    </tr>
+    <tr>
+        <td rowspan="4"><a href="https://sachvui.com/doc-sach/doremon-truyen-dai-fujiko-f-fujio/tap-1-phan-1.html"><img
+                src="doremon.jpg" height="230" width="220"/> </a></td>
+
+    </tr>
+    <tr>
+        <td><a href="https://sachvui.com/doc-sach/doremon-truyen-dai-fujiko-f-fujio/tap-1-phan-1.html"><img
+                src="doremon.jpg" height="100" width="100"/> </a></td>
+        <td><a href="https://sachvui.com/doc-sach/doremon-truyen-dai-fujiko-f-fujio/tap-1-phan-1.html"><img
+                src="riven.jpg" height="100" width="100"/> </a></td>
+        <td><a href="https://sachvui.com/doc-sach/doremon-truyen-dai-fujiko-f-fujio/tap-1-phan-1.html"><img
+                src="tom.jpg" height="100" width="100"/> </a></td>
+        <td><a href="https://sachvui.com/doc-sach/doremon-truyen-dai-fujiko-f-fujio/tap-1-phan-1.html"><img
+                src="gai.jpg" height="100" width="100"/> </a></td>
+        <td><a href="https://sachvui.com/doc-sach/doremon-truyen-dai-fujiko-f-fujio/tap-1-phan-1.html"><img
+                src="gai1.jpg" height="100" width="100"/> </a></td>
+        <td><a href="https://sachvui.com/doc-sach/doremon-truyen-dai-fujiko-f-fujio/tap-1-phan-1.html"><img
+                src="gai2.jpg" height="100" width="100"/> </a></td>
+        <td><a href="https://sachvui.com/doc-sach/doremon-truyen-dai-fujiko-f-fujio/tap-1-phan-1.html"><img
+                src="tom.jpg" height="100" width="100"/> </a></td>
+        <td><a href="https://sachvui.com/doc-sach/doremon-truyen-dai-fujiko-f-fujio/tap-1-phan-1.html"><img
+                src="gai.jpg" height="100" width="100"/> </a></td>
+        <td><a href="https://sachvui.com/doc-sach/doremon-truyen-dai-fujiko-f-fujio/tap-1-phan-1.html"><img
+                src="gai1.jpg" height="100" width="100"/> </a></td>
+        <td><a href="https://sachvui.com/doc-sach/doremon-truyen-dai-fujiko-f-fujio/tap-1-phan-1.html"><img
+                src="gai2.jpg" height="100" width="100"/> </a></td>
+
+    </tr>
+    <tr>
+        <td><a href="https://sachvui.com/doc-sach/doremon-truyen-dai-fujiko-f-fujio/tap-1-phan-1.html">Đọc luôn</a></td>
+        <td><a href="https://sachvui.com/doc-sach/doremon-truyen-dai-fujiko-f-fujio/tap-1-phan-1.html">Đọc luôn</a></td>
+        <td><a href="https://sachvui.com/doc-sach/doremon-truyen-dai-fujiko-f-fujio/tap-1-phan-1.html">Đọc luôn</a></td>
+        <td><a href="https://sachvui.com/doc-sach/doremon-truyen-dai-fujiko-f-fujio/tap-1-phan-1.html">Đọc luôn</a></td>
+        <td><a href="https://sachvui.com/doc-sach/doremon-truyen-dai-fujiko-f-fujio/tap-1-phan-1.html">Đọc luôn</a></td>
+        <td><a href="https://sachvui.com/doc-sach/doremon-truyen-dai-fujiko-f-fujio/tap-1-phan-1.html">Đọc luôn</a></td>
+        <td><a href="https://sachvui.com/doc-sach/doremon-truyen-dai-fujiko-f-fujio/tap-1-phan-1.html">Đọc luôn</a></td>
+        <td><a href="https://sachvui.com/doc-sach/doremon-truyen-dai-fujiko-f-fujio/tap-1-phan-1.html">Đọc luôn</a></td>
+        <td><a href="https://sachvui.com/doc-sach/doremon-truyen-dai-fujiko-f-fujio/tap-1-phan-1.html">Đọc luôn</a></td>
+        <td><a href="https://sachvui.com/doc-sach/doremon-truyen-dai-fujiko-f-fujio/tap-1-phan-1.html">Đọc luôn</a></td>
+    </tr>
+    <tr>
+        <td><a href="https://sachvui.com/doc-sach/doremon-truyen-dai-fujiko-f-fujio/tap-1-phan-1.html">
+            <img src="gai4.jpg" height="100" width="100"/> </a></td>
+        <td><a href="https://sachvui.com/doc-sach/doremon-truyen-dai-fujiko-f-fujio/tap-1-phan-1.html">
+            <img src="ngua2.jpg" height="100" width="100"/> </a></td>
+        <td><a href="https://sachvui.com/doc-sach/doremon-truyen-dai-fujiko-f-fujio/tap-1-phan-1.html">
+            <img src="xe.jpg" height="100" width="100"/></a></td>
+        <td><a href="https://sachvui.com/doc-sach/doremon-truyen-dai-fujiko-f-fujio/tap-1-phan-1.html"><img
+                src="sutu.jpg" height="100" width="100"/> </a></td>
+        <td><a href="https://sachvui.com/doc-sach/doremon-truyen-dai-fujiko-f-fujio/tap-1-phan-1.html">
+            <img src="ho.jpg" height="100" width="100"/>
+        </a></td>
+        <td><a href="https://sachvui.com/doc-sach/doremon-truyen-dai-fujiko-f-fujio/tap-1-phan-1.html"><img
+                src="gai5.jpg" height="100" width="100"/> </a></td>
+        <td><a href="https://sachvui.com/doc-sach/doremon-truyen-dai-fujiko-f-fujio/tap-1-phan-1.html"><img
+                src="tom.jpg" height="100" width="100"/> </a></td>
+        <td><a href="https://sachvui.com/doc-sach/doremon-truyen-dai-fujiko-f-fujio/tap-1-phan-1.html"><img
+                src="gai.jpg" height="100" width="100"/> </a></td>
+        <td><a href="https://sachvui.com/doc-sach/doremon-truyen-dai-fujiko-f-fujio/tap-1-phan-1.html"><img
+                src="gai1.jpg" height="100" width="100"/> </a></td>
+        <td><a href="https://sachvui.com/doc-sach/doremon-truyen-dai-fujiko-f-fujio/tap-1-phan-1.html"><img
+                src="gai2.jpg" height="100" width="100"/> </a></td>
+
+    </tr>
+    <tr>
+        <td><a href="https://sachvui.com/doc-sach/doremon-truyen-dai-fujiko-f-fujio/tap-1-phan-1.html">Đọc luôn </a>
+        </td>
+        <td><a href="https://sachvui.com/doc-sach/doremon-truyen-dai-fujiko-f-fujio/tap-1-phan-1.html">Đọc luôn</a></td>
+        <td><a href="https://sachvui.com/doc-sach/doremon-truyen-dai-fujiko-f-fujio/tap-1-phan-1.html">Đọc luôn</a></td>
+        <td><a href="https://sachvui.com/doc-sach/doremon-truyen-dai-fujiko-f-fujio/tap-1-phan-1.html">Đọc luôn</a></td>
+        <td><a href="https://sachvui.com/doc-sach/doremon-truyen-dai-fujiko-f-fujio/tap-1-phan-1.html">Đọc luôn</a></td>
+        <td><a href="https://sachvui.com/doc-sach/doremon-truyen-dai-fujiko-f-fujio/tap-1-phan-1.html">Đọc luôn</a></td>
+        <td><a href="https://sachvui.com/doc-sach/doremon-truyen-dai-fujiko-f-fujio/tap-1-phan-1.html">Đọc luôn</a></td>
+        <td><a href="https://sachvui.com/doc-sach/doremon-truyen-dai-fujiko-f-fujio/tap-1-phan-1.html">Đọc luôn</a></td>
+        <td><a href="https://sachvui.com/doc-sach/doremon-truyen-dai-fujiko-f-fujio/tap-1-phan-1.html">Đọc luôn</a></td>
+        <td><a href="https://sachvui.com/doc-sach/doremon-truyen-dai-fujiko-f-fujio/tap-1-phan-1.html">Đọc luôn</a></td>
+    </tr>
+</table>
+<p id="quang_cao"><a style="color: red" href="https://www.google.com/"><img onmouseover="luot()" src="trang.jpeg"
+                                                                            height="150" width="200"> <br>quang cao</a>
+</p>
+<!--<p id="ab"><a style="color: red" href="https://www.google.com/"><img src="trang.jpeg" height="150" width="200"> <br>quang-->
+<!--    cao</a></p>-->
+
+
+</body>
+</html>
+<script>
+    function trang_chu() {
+        alert("dang den trang chu")
+
+    }
+
+    function danh_sach() {
+        alert(" chuyển sang danh sach  ")
+
+
+    }
+
+    function the_loai() {
+        alert("đang chuyển thể loai ")
+    }
+
+    function tuy_chinh() {
+        alert("định làm gì đây?")
+    }
+
+    function search() {
+
+
+    }
+
+    function luot() {
+        alert("định làm gì đây?")
+    }
+</script>
+

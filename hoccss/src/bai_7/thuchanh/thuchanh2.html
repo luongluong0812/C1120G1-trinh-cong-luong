@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .col-1 {width: 10%;}
+        .col-2 {width: 20%;}
+        .col-3 {width: 30%;}
+        .col-4 {width: 40%;}
+        .col-5 {width: 50%;}
+        .col-6 {width: 60%;}
+        .col-7 {width: 70%;}
+        .col-8 {width: 80%;}
+        .col-9 {width: 90%;}
+        .col-10 {width: 100%;}
+
+        [class*="col-"]{
+            float: left;
+
+            /*box-sizing: border-box;*/
+
+        }
+        .header{
+            background-color: #241940;
+            color: red;
+            text-align: center;
+            padding: 50px;
+            margin-bottom: 1px;
+        }
+        .header-link{
+            background-color: #241940;
+            color: green;
+            text-align: center;
+            padding: 50px;
+            margin-bottom: 1px;
+
+        }
+        .left{
+            background-color: #666666;
+            color: #e5e5e5;
+            padding: 50px;
+            margin-right: 1px;
+
+        }
+        .mid{
+            background-color: blue;
+            color: red;
+            padding: 50px;
+            margin-right: 1px;
+
+        }
+        .right{
+            color: #241940;
+            background-color: green;
+            padding: 50px;
+            margin-bottom: 1px;
+
+        }
+        .bot{
+            color: #241940;
+            background-color: blueviolet;
+            padding: 15px;
+            margin-top: 5px;
+        }
+
+        @media only screen and (max-width: 768px) {
+            [class*="col-"] {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="row"><div class="col-10">
+    <div class="header"><p>head</p></div>
+</div></div>
+<div class="col-10">
+    <div class="header-link"><p>head-link</p></div>
+</div>
+
+<div class="col-2">
+    <div class="left">
+    <p>left</p>
+</div></div>
+
+<div class="col-5"><div class="mid">
+    <p>content</p>
+</div></div>
+
+<div class="col-3"><div class="right">
+    <p>right</p>
+</div></div>
+
+<div class="col-10"><div class="bot"><p>footer</p></div></div>
+
+</body>
+</html>
