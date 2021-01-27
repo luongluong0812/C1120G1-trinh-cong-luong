@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="0e114e23-d5ae-43db-953d-7bc6ea8642ae" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../module3/bai_11/demo/src/com/codegym/controller/CustomerServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module3/bai_11/demo/src/com/codegym/model/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module3/bai_11/demo/src/com/codegym/service/CustomerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module3/bai_11/demo/src/com/codegym/service/CustomerServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module3/bai_11/demo/web/customer/create.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module3/bai_11/demo/web/customer/delete.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module3/bai_11/demo/web/customer/edit.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module3/bai_11/demo/web/customer/list.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module3/bai_11/demo/web/customer/view.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module3/bai_11/demo/web/jstl-1.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module3/demo2/src/bean/Student.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module3/demo2/src/controller/StudentServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module3/demo2/src/repository/StudentRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module3/demo2/src/repository/impl/StudentRepositoryImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module3/demo2/src/service/StudentService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module3/demo2/src/service/impl/StudentServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module3/demo2/web/jstl-1.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module3/skg/src/com/codegym/controller/CustomerServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module3/skg/src/com/codegym/model/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module3/skg/src/com/codegym/service/CustomerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module3/skg/src/com/codegym/service/CustomerServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module3/skg/web/customer/create.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module3/skg/web/customer/list.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module3/skg/web/customer/view.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module3/skg/web/error-404.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module3/skg/web/jstl-1.2.jar" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1najWChlzWMfeweeNMSHIhuy1Ia" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../module3/skg" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\C0920G1_TRINHCONGLUONG\java-web-mvc-master\web" />
+    </key>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0e114e23-d5ae-43db-953d-7bc6ea8642ae" name="Default Changelist" comment="" />
+      <created>1611635124958</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1611635124958</updated>
+      <workItem from="1611635127257" duration="159000" />
+      <workItem from="1611635538762" duration="137000" />
+      <workItem from="1611642575702" duration="245000" />
+      <workItem from="1611643416391" duration="253000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="137" y="19" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1611635556525">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="137" y="19" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1611635556525" />
+    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1611643223078">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1611643223078" />
+    <state x="163" y="0" key="SettingsEditor" timestamp="1611635285911">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="163" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1611635285911" />
+    <state x="91" y="0" key="new project wizard" timestamp="1611642671762">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="91" y="0" key="new project wizard/0.0.1366.728@0.0.1366.728" timestamp="1611642671762" />
+  </component>
+</project>
