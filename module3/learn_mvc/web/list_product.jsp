@@ -24,14 +24,15 @@
             <th>delete</th>
             <th>update</th>
         </tr>
-<c:forEach items='${requestScope["product"]}' var="product">
+<c:forEach items="${product}" var="product">
     <tr>
-        <td> <p>${product.name}</p> </td>
-        <td> <p>${product.id}</p></td>
-        <td> <p>${product.price}</p></td>
-        <td> <p>${product.color}</p></td>
-        <td> <p>${product.name}</p></td>
-        <td> <p>${product.name}</p></td>
+        <td> <c:out value="${product.name}"/> </td>
+        <td> <c:out value="${product.name}"/> </td>
+        <td> <c:out value="${product.name}"/> </td>
+        <td> <c:out value="${product.name}"/> </td>
+        <td> <c:out value="${product.name}"/> </td>
+        <td> <c:out value="${product.name}"/> </td>
+
     </tr>
 </c:forEach>
     </table>

@@ -45,6 +45,7 @@ public class StudentServlet extends HttpServlet {
             default:
                 request.setAttribute("studentListFromServlet", studentService.findAll());
                 request.getRequestDispatcher("list_student.jsp").forward(request, response);
+                break;
         }
 
 

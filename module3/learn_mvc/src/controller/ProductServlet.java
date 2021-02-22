@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
-@WebServlet(name = "ProductServlet", urlPatterns = {"", "/product_list.jsp"})
+@WebServlet(name = "ProductServlet", urlPatterns = {"", "/ProductServlet"})
 public class ProductServlet extends HttpServlet {
     private ProductService productService = new ProductServiceIplm();
 
@@ -38,8 +38,8 @@ public class ProductServlet extends HttpServlet {
     }
 
     private void show_list_product(HttpServletRequest request, HttpServletResponse response) {
-        List<Product> list = this.productService.findAll();
-        request.setAttribute("product", list);
+
+        request.setAttribute("product", productService.findAll());
         try {
             request.getRequestDispatcher("web/list_product.jsp").forward(request, response);
         } catch (ServletException e) {
